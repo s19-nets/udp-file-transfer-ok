@@ -62,7 +62,7 @@ def put(usrFileName):
         clientSocket.sendto(b'put start ' + str(numPackets).encode() + b' ' + usrFileName.encode(), serverAddr)
 
         # Waiting to recieve message to start sending file
-        #recMessage, serverAddrPort = clientSocket.recvfrom(2048)
+        recMessage, serverAddrPort = clientSocket.recvfrom(2048)
         #select.select(5)
         #if "Received" in recMessage.decode():
         #    print("Sending now")
